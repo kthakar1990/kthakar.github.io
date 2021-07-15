@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curriculum vitae">
+    <meta name="author" content="Kandarp Thakar">
+    <link rel="shortcut icon" href="assets/img/icons/favicon.png">
+
+    <title>Kandarp Thakar</title>
+
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script type="text/javascript">
+		let includePage = "assets/components/home.html";
+		$(function(){
+			$("#header").load("assets/components/header.html");
+			$("#include").load(includePage);
+			$("#footer").load("assets/components/footer.html");
+		});
+
+        $(window).on('hashchange', function() {
+            var href = location.hash.slice(1) +".html";
+            includePage = 'assets/components/' + href;
+            $("#include").load(includePage);
+        });
+	</script>
+</head>
+
+<body style="padding-bottom: 200px">
+	<!-- header start -->
+	<div id="header"></div>
+	<!-- header end -->
+
+	<!-- Page Start -->
+	<div class="container">
+		<div class="row w-100">
+			<div class="col-md-4 align-items-stretch">
+				<div class="card">
+					<div class="view overlay">
+						<img class="card-img-top" src="assets/img/image.jpg" alt="Kandarp Thakar">
+					</div>
+					<div class="card-body">
+						<h3 class="card-title">Kandarp Thakar</h3>
+						<h6 class="card-text">Product Manager</h6>
+						<p class="card-text">
+							<i class="fa fa-envelope"></i> kandarp.thakar2014@gmail.com
+						</p>
+						<ul class="list-unstyled list-inline font-small">
+							<li class="list-inline-item pr-2 white-text">
+								<h3>
+									<a class="nav-item nav-link" href="https://github.com/kthakar1990" target="_blank">
+										<i class="fa fa-github"></i>
+									</a>
+								</h3>
+							</li>
+							<li class="list-inline-item pr-2">
+								<h3>
+									<a class="nav-item nav-link" href="https://in.linkedin.com/in/kandarpthakar" target="_blank">
+										<i class="fa fa-linkedin"></i>
+									</a>
+								</h3>
+							</li>
+							<!--<li class="list-inline-item pr-2">
+								<h3>
+									<a class="nav-item nav-link" href="assets/resume/Resume.pdf" target="_blank">
+										<i class="fa fa-download"></i>
+									</a>
+								</h3>
+							</li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- profile start -->
+			<div class="col-md-8 d-flex align-items-stretch" id="include"></div>
+			<!-- profile end -->
+		</div>
+	</div>
+	<!-- Page End -->
+
+	<!-- footer start -->
+	<div id="footer"></div>
+	<!-- footer end -->
+	<script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
